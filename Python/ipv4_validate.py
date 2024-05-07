@@ -7,7 +7,6 @@
 # This will validate an IPv4 address. It will return True if the IP is valid, otherwise False.
 # You can use this function to validate an IP address before using it in your program.
 
-# ```python
 
 def validate(ipv4Address):
     dots = 0
@@ -30,12 +29,17 @@ def validate(ipv4Address):
     
     dot = "."
     index = [index for index, string in enumerate(format_) if string == dot]
-    print(index)
+
     for i in range(len(index) - 1):
         diff = index[i + 1] - index[i]
         if diff == 1:
             return False
     return True
+
+
+# Usage:
+
+# from ipv4_validate import validate
 
 # ipv4Address = str(input("Input IP: "))
 # ipv4Address = "125.1.1.1"
